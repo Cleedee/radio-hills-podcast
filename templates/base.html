@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    {% block head %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
+    <link rel="alternate" type="application/rss+xml" title="Radio Hills RPG"
+          href="https://radio-hills-rpg.rj.r.appspot.com/feed.xml"/>
+    <title>Radio Hills RPG Podcast</title>
+    <script src="https://cdn.firebase.com/libs/firebaseui/4.5.0/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/4.5.0/firebaseui.css">    
+    <!--
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    {% endblock %}
+  </head>
+  <body>
+    <div class="container">{% block content %}{% endblock %}</div>
+    <div id="footer">
+      {% block footer %}
+      &copy; Copyright 2020 by Claudio Torcato.
+      {% endblock %}
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-auth.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyAJ4CIX5QNXbC1590ihTvp86WXLk7_-jRA",
+        authDomain: "radio-hills-rpg.firebaseapp.com",
+        databaseURL: "https://radio-hills-rpg.firebaseio.com",
+        projectId: "radio-hills-rpg",
+        storageBucket: "radio-hills-rpg.appspot.com",
+        messagingSenderId: "503925343309",
+        appId: "1:503925343309:web:c7e0db2155bfcba6798804",
+        measurementId: "G-QNCWVVSTP3"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>

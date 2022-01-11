@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+  <h1>Radio Hills RPG Podcast</h1>
+  <p>Podcast sobre RPG do servidor Discord To the Hills!</p>
+
+  {% for episodio in lista %}
+  <div class="card" style="width: 18rem;">
+    <img class="img-thumbnail" src="{{ url_for('static', filename='img/logomarca_podcast.png') }}" >
+    <div class="card-body">
+      <h5 class="card-title">
+        <a href="{{ url_for('post',id=episodio['guid'])}}">{{episodio['titulo']}}</a>
+      </h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{ episodio['data_pub']|data_formatada}}</h6>
+      <p class="card-text">
+        {% autoescape false %}
+          {{episodio['descricao']}}
+        {% endautoescape %}
+      </p>
+    </div>
+  </div>
+  {% endfor %}
+
+{% endblock %}
