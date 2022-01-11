@@ -34,14 +34,14 @@
     <script>
     // Your web app's Firebase configuration
     var firebaseConfig = {
-        apiKey: "AIzaSyAJ4CIX5QNXbC1590ihTvp86WXLk7_-jRA",
-        authDomain: "radio-hills-rpg.firebaseapp.com",
-        databaseURL: "https://radio-hills-rpg.firebaseio.com",
-        projectId: "radio-hills-rpg",
-        storageBucket: "radio-hills-rpg.appspot.com",
-        messagingSenderId: "503925343309",
-        appId: "1:503925343309:web:c7e0db2155bfcba6798804",
-        measurementId: "G-QNCWVVSTP3"
+        apiKey: "{{ config['FIREBASE_APIKEY'] }}",
+        authDomain: "{{ config['FIREBASE_AUTHDOMAIN'] }}",
+        databaseURL: "{{ config['FIREBASE_DATABASEURL'] }}",
+        projectId: "{{ config['FIREBASE_PROJECTID'] }}",
+        storageBucket: "{{ config['FIREBASE_STORAGEBUCKET'] }}",
+        messagingSenderId: "{{ config['FIREBASE_MESSAGINGSENDERID'] }}",
+        appId: "{{ config['FIREBASE_APPID'] }}",
+        measurementId: "{{ config['FIREBASE_MEASUREMENTID'] }}"
     };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
